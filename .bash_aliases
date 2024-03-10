@@ -1,6 +1,5 @@
 # Sets an alias for updating the system and removing extras
-alias update='sudo apt update && sudo apt upgrade'
-alias autorm='sudo apt autoremove'
+alias update='sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove'
 
 # Aliases for navigating directories
 alias docs='cd ~/documents/'
