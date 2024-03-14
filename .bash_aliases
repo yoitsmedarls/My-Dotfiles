@@ -21,7 +21,7 @@ alias emacs='emacs --no-window-system'
 
 # Aliases for working with Git
 alias gin='git init'
-alias glog='git log'
+alias glog='git log --graph --oneline --decorate'
 alias gres='git reset .'
 alias gcom='git commit -am'
 alias gmcm='git commit --amend -m'
