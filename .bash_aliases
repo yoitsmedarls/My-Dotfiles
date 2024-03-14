@@ -1,13 +1,37 @@
 # Sets an alias for updating the system and removing extras
 alias update='sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove'
 
-# Aliases for navigating directories
+# Aliases for my most visited directories
 alias docs='cd ~/documents/'
 alias cfiles='cd ~/documents/c-files/'
 alias cppfiles='cd ~/documents/cpp-files/'
-alias jvfiles='cd ~/documents/java-files/'
-alias pyfiles='cd ~/documents/python-files/'
+alias javafiles='cd ~/documents/java-files/'
+alias pythonfiles='cd ~/documents/python-files/'
 alias webfiles='cd ~/documents/webdev-files/'
+
+# Aliases for navigating through directories
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Alias for launching Emacs in terminal mode
+alias emacs='emacs --no-window-system'
+
+# Aliases for working with Git
+alias gin='git init'
+alias gadd='git add .'
+alias gres='git reset .'
+alias gcom='git commit -m'
+alias gbr='git branch'
+alias gchk='git checkout'
+alias gsth='git stash -u'
+alias gpop='git stash pop'
+alias gmer='git merge'
+alias grem='git remote add origin'
+alias gpull='git pull -u origin'
+alias gpush='git push -u origin'
+alias gstat='git status'
 
 # Aliases for custom functions in .bash_functions
 alias newc='new_c_project'
