@@ -8,6 +8,7 @@ alias cppfiles='cd ~/documents/cpp-files/'
 alias javafiles='cd ~/documents/java-files/'
 alias pythonfiles='cd ~/documents/python-files/'
 alias webfiles='cd ~/documents/webdev-files/'
+alias dotfiles='cd ~/.dotfiles'
 
 # Aliases for navigating through directories
 alias ..='cd ..'
