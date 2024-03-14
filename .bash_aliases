@@ -21,9 +21,9 @@ alias emacs='emacs --no-window-system'
 
 # Aliases for working with Git
 alias gin='git init'
-alias gadd='git add .'
 alias gres='git reset .'
-alias gcom='git commit -m'
+alias gcom='git commit -am'
+alias gmcm='git commit --amend -m'
 alias gbr='git branch'
 alias gchk='git checkout'
 alias gsth='git stash -u'
