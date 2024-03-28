@@ -110,4 +110,4 @@ if ! shopt -oq posix; then
 fi
 
 # Initializies Oh-My-Posh with the custom shell theme.
-eval "$(oh-my-posh init bash --config /mnt/c/Users/johnd/Posh/blue-owl.omp.json)"
+eval "$(oh-my-posh init bash --config /mnt/c/Users/johnd/Posh/onehalf.minimal.omp.json)"
