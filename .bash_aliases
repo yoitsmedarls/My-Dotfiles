@@ -3,11 +3,11 @@ alias update='sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremov
 
 # Aliases for my most visited directories
 alias docs='cd ~/documents/'
-alias cfiles='cd ~/documents/c-files/'
-alias cppfiles='cd ~/documents/cpp-files/'
-alias javafiles='cd ~/documents/java-files/'
-alias pythonfiles='cd ~/documents/python-files/'
-alias webfiles='cd ~/documents/webdev-files/'
+alias cprojs='cd ~/documents/c-projects/'
+alias cppprojs='cd ~/documents/cpp-projects/'
+alias javaprojs='cd ~/documents/java-projects/'
+alias pyprojs='cd ~/documents/python-projects/'
+alias webprojs='cd ~/documents/web-projects/'
 alias dotfiles='cd ~/.dotfiles'
 
 # Aliases for navigating through directories
