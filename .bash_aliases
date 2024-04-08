@@ -19,6 +19,9 @@ alias .....='cd ../../../..'
 # Alias for launching Emacs in terminal mode
 alias emacs='emacs --no-window-system'
 
+# Alias to make VS Code open files in an existing window
+alias code="code -r"
+
 # Aliases for working with Git
 alias gin='git init'
 alias glog='git log --graph --oneline --decorate'
