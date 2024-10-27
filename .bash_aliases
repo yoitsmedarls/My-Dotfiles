@@ -47,4 +47,4 @@ alias rl='exec bash'
 alias cls='clear'
 
 # Alias for compiling SFML programs
-alias sfml='g++ -c main.cpp && g++ main.o -o main -lsfml-graphics -lsfml-window -lsfml-system && ./main'
+alias sfml='g++ -c main.cpp && g++ main.o -o main -lsfml-graphics -lsfml-window -lsfml-system && rm *.o && ./main'
