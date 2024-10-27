@@ -43,5 +43,8 @@ alias newc='new_c_project'
 alias newcpp='new_cpp_project'
 
 # Aliases for clearing stuff and reloading
-alias rl='exec bash '
+alias rl='exec bash'
 alias cls='clear'
+
+# Alias for compiling SFML programs
+alias sfml='g++ -c *.cpp && g++ *.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system'
