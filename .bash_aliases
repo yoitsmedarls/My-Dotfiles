@@ -19,7 +19,7 @@ alias .....='cd ../../../..'
 # Alias for launching Emacs in terminal mode
 alias emacs='emacs --no-window-system'
 
-# Alias to make VS Code open files in an existing window
+# Alias to make VS Code open files in a new window
 alias code="code -n"
 
 # Aliases for working with Git
@@ -47,4 +47,4 @@ alias rl='exec bash'
 alias cls='clear'
 
 # Alias for compiling SFML programs
-alias sfml='g++ -c main.cpp && g++ main.o -o main -lsfml-graphics -lsfml-window -lsfml-system && rm *.o && ./main'      
+alias sfml_make='g++ -c src/main.cpp && g++ main.o -o main -lsfml-graphics -lsfml-window -lsfml-system && rm *.o && mv main bin/main && cp -r img/ bin/ && ./bin/main'      
