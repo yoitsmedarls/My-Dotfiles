@@ -23,6 +23,7 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
@@ -69,7 +70,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls -1 --human-readable --classify --color=auto'
+    alias ls='eza --tree --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
@@ -82,7 +83,7 @@ fi
 
 # Aliases for ls
 alias la='ls --almost-all'
-alias ll='la -lgo'
+alias ll='ls --color=always --long --git --icons=always --almost-all'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -115,3 +116,36 @@ eval "$(oh-my-posh init bash --config /mnt/c/Users/johnd/Posh/onehalf.minimal.om
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+# Alias for replacing cat with bat
+alias cat='batcat'
+
+# Alias for replacing fdfind with fd
+alias fd='fdfind'
+
+
+export FZF_DEFAULT_COMMAND="fdfind --type=f --hidden --strip-cwd-prefix --follow --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fdfind --type=d --hidden --strip-cwd-prefix --follow --exclude .git"
+export FZF_DEFAULT_OPTS="--height 40% --border --layout=reverse --info=inline"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fdfind --hidden --follow --exclude ".git" . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fdfind --type d --hidden --follow --exclude ".git" . "$1"
+}
+
+source ~/fzf-git.sh/fzf-git.sh
+
+export NETLIFY_AUTH_TOKEN="nfp_TwZqvSEpb3H3WcoxGwkcaGSi9srcbg4re6be"
